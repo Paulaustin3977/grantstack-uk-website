@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Order — UK Home Energy & Grants Stacking Playbook | GrantStack UK</title>
+<meta name="description" content="Place your order for the UK Home Energy & Grants Stacking Playbook 2026/27. £19 single user, with free reissued copies on every £1,000+ scheme change.">
+<meta name="theme-color" content="#0b1118">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b1118'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%2334d399'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html"><span class="dot"></span>GRANTSTACK UK</a>
+    <nav class="nav">
+      <a href="index.html#schemes">Schemes</a>
+      <a href="index.html#contents">What's inside</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding:60px 0 30px;">
+  <div class="container">
+    <h1>Place your order</h1>
+    <p class="lead">A £19 one-time payment buys the 20-page PDF playbook and lifetime updates for any £1,000+ scheme change. Two payment options below — pick whichever is easier for you.</p>
+  </div>
+</section>
+
+<section style="padding-top:30px;">
+  <div class="container">
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:22px;">
+      <div class="price featured" style="grid-column: span 2;">
+        <h3>Pay by card — instant download</h3>
+        <p style="color:var(--fg-muted);">Stripe-hosted checkout. We never see your card details. You receive the PDF download link by email within minutes.</p>
+
+        <div class="price-amt">£19<small> one-time, single user</small></div>
+
+        <div id="stripe-flow">
+          <!-- Will be replaced by live Stripe Payment Link when founder wires it up.
+               Until then: mailto fallback below. -->
+          <a class="btn btn-primary" id="buy-stripe" href="thanks.html?sku=playbook&amp;testmode=1"
+             onclick="recordIntent('stripe-test');return true;">
+             Buy with card (Stripe test mode)
+          </a>
+          <p style="margin-top:14px;font-size:.85rem;color:var(--fg-dim);">
+            Stripe is in test mode for this launch. Founder action item: flip to live
+            payment after completing Stripe account verification.
+          </p>
+        </div>
+
+        <hr style="margin:24px 0;border:0;border-top:1px solid var(--line);">
+
+        <h4>Or pay by BACS / bank transfer</h4>
+        <p style="color:var(--fg-muted);font-size:.95rem;">
+          Send <strong>£19</strong> to:
+        </p>
+        <pre style="background:var(--bg);padding:14px 16px;border-radius:8px;border:1px solid var(--line-strong);font-family:monospace;font-size:.9rem;color:var(--fg);white-space:pre-wrap;line-height:1.7;">
+Sort code: <span id="sortcode">[founder to fill]</span>
+Account:    <span id="account">[founder to fill]</span>
+Reference:  <span id="reference">GS-<span id="ref-suffix">XXXXXX</span></span>
+          </pre>
+        <p style="color:var(--fg-muted);font-size:.92rem;">
+          Use your email address as the reference so we can match the payment to your
+          delivery. The PDF download link arrives by email the same working day.
+        </p>
+
+        <p style="margin-top:14px;">
+          <a class="btn btn-ghost" id="buy-bacs"
+             href='mailto:orders@grantstack.uk?subject=Playbook%20order%20%E2%80%94%20BACS&amp;body=Hi%2C%20I%20would%20like%20to%20order%20the%20UK%20Home%20Energy%20%26amp%3B%20Grants%20Stacking%20Playbook%20for%20%C2%A319.%0A%0AName%3A%20%0AEmail%20for%20delivery%3A%20%0APostcode%20(first%20half%2C%20e.g.%20SW1)%20(optional)%3A%20%0AHow%20did%20you%20find%20us%3A%20%0A%0AThanks%21'>
+             Email orders@grantstack.uk to confirm
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:24px;">
+      <strong>What happens next, in plain language.</strong>
+      After we receive your payment, we email you a download link to the PDF.
+      The PDF file is signed and time-stamped. Updates for £1,000+ scheme
+      changes are issued automatically to the email you paid with, forever.
+    </div>
+
+    <div class="warn" style="margin-top:14px;">
+      <strong>Refund policy.</strong>
+      Email <a href="mailto:hello@grantstack.uk">hello@grantstack.uk</a> within
+      14 days of purchase for a full refund, no questions asked. After 14 days,
+      you still receive free reissued copies on any £1,000+ scheme change.
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container row">
+    <div>
+      <strong style="color:var(--fg);">GrantStack UK</strong><br>
+      Independent UK consumer publisher<br>
+      hello@grantstack.uk
+    </div>
+    <div>
+      <a href="index.html#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Generate a unique reference so payments are matched to orders.
+  (function () {
+    var ref = 'GS-' + Math.random().toString(36).slice(2, 8).toUpperCase();
+    var el = document.getElementById('ref-suffix');
+    if (el) el.textContent = ref;
+    var a = document.getElementById('buy-bacs');
+    if (a) {
+      var base = 'mailto:orders@grantstack.uk?subject=Playbook%20order%20%E2%80%94%20BACS%20(' + ref + ')&';
+      base += 'body=Hi%2C%20I%20would%20like%20to%20order%20the%20UK%20Home%20Energy%20%26amp%3B%20Grants%20Stacking%20Playbook%20for%20%C2%A319.%0A%0AReference%3A%20' + ref + '%0AName%3A%20%0AEmail%20for%20delivery%3A%20%0A%0AThanks%21';
+      a.setAttribute('href', base);
+    }
+  })();
+
+  // Best-effort click tracking (works without a backend: stores in localStorage
+  // and pings a static endpoint when one is configured).
+  function recordIntent(channel) {
+    try {
+      var key = 'gs_intent_' + channel;
+      var n = parseInt(localStorage.getItem(key) || '0', 10) + 1;
+      localStorage.setItem(key, String(n));
+      var arr = JSON.parse(localStorage.getItem('gs_intents') || '[]');
+      arr.push({ channel: channel, at: new Date().toISOString() });
+      localStorage.setItem('gs_intents', JSON.stringify(arr));
+    } catch (e) {}
+  }
+</script>
+
+</body>
+</html>
