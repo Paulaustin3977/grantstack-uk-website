@@ -12,6 +12,64 @@
 <meta name="robots" content="index,follow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b1118'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%2334d399'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/styles.css">
+
+<!-- JSON-LD: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "GrantStack UK",
+  "url": "https://grantstack.uk/",
+  "logo": "https://grantstack.uk/favicon.ico",
+  "description": "Independent UK consumer publisher of the UK Home Energy & Grants Stacking Playbook.",
+  "email": "hello@grantstack.uk",
+  "foundingDate": "2026-10-16",
+  "areaServed": "GB",
+  "knowsAbout": ["Boiler Upgrade Scheme", "Warm Homes: Local Grant", "Warm Homes Loan Scheme", "Disabled Facilities Grant", "Crisis and Resilience Fund", "UK home energy grants"]
+}
+</script>
+
+<!-- JSON-LD: Product -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "UK Home Energy & Grants Stacking Playbook 2026/27",
+  "description": "A 20-page independent playbook walking UK homeowners and landlords through every live UK home-energy grant available in 2026/27 and the rules for combining them before the 31 March 2027 deadline.",
+  "sku": "grantstack-playbook-2026",
+  "brand": {"@type": "Brand", "name": "GrantStack UK"},
+  "category": "Consumer Guide / Energy",
+  "audience": {"@type": "PeopleAudience", "suggestedMinAge": 18, "geographicArea": {"@type": "Country", "name": "United Kingdom"}},
+  "offers": {
+    "@type": "Offer",
+    "price": "3.99",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock",
+    "url": "https://grantstack.uk/order.html",
+    "priceValidUntil": "2027-12-31",
+    "seller": {"@type": "Organization", "name": "GrantStack UK"}
+  },
+  "aggregateRating": null,
+  "review": null
+}
+</script>
+
+<!-- JSON-LD: FAQPage (matters for SERP FAQ accordion) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Can I apply for a BUS grant myself?", "acceptedAnswer": {"@type": "Answer", "text": "No. Only an MCS-certified installer can. You consent via a secure Ofgem link. Chapter 3 of the playbook walks through the four steps."}},
+    {"@type": "Question", "name": "What if I'm on benefits — do I still get the £7,500 BUS?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. BUS is not means-tested. You can combine it with means-tested schemes (Warm Homes Local Grant, DFG) for other measures."}},
+    {"@type": "Question", "name": "What is your refund policy?", "acceptedAnswer": {"@type": "Answer", "text": "Email us within 14 days of purchase for a full refund, no questions asked. After 14 days, you still receive free updated copies for any £1,000+ scheme change."}},
+    {"@type": "Question", "name": "Will the playbook be updated when schemes change?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We reissue a free updated PDF to everyone who has bought a copy in the past 12 months whenever a £1,000+ scheme change is published."}},
+    {"@type": "Question", "name": "Is the playbook really independent?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We do not receive referral fees from any installer, lender or council."}},
+    {"@type": "Question", "name": "What if I'm in Scotland or Northern Ireland?", "acceptedAnswer": {"@type": "Answer", "text": "The playbook is England-and-Wales-centric on heating grants (BUS applies in England and Wales). Scotland, Wales and NI equivalents for emergency help and DFG are covered. Scotland's separate heat-pump grants are in Chapter 11."}},
+    {"@type": "Question", "name": "Do you store payment card details?", "acceptedAnswer": {"@type": "Answer", "text": "No. We never see them. Payment collection is handled by Stripe (when live). We hold your name, email and the fact that you bought a copy — that's all."}}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -23,6 +81,7 @@
       <a href="#contents">What's inside</a>
       <a href="#pricing">Buy</a>
       <a href="#faq">FAQ</a>
+      <a href="updates.html">Updates</a>
       <a href="#free-chapters">Free chapters</a>
     </nav>
   </div>
@@ -244,8 +303,8 @@
 
 <section id="free-chapters">
   <div class="container">
-    <h2>Two free chapters from the playbook</h2>
-    <p class="sub">Read the deepest guides before buying. No email signup, no popup. These are the same content you'll find inside the £3.99 PDF, with full Ofgem / DESNZ source citations.</p>
+    <h2>Six free chapters from the playbook</h2>
+    <p class="sub">Read the deepest guides before buying. No email signup, no popup. These are the same content you'll find inside the £3.99 PDF, with full Ofgem / DESNZ / GOV.UK source citations.</p>
 
     <div class="grid">
       <div class="card">
@@ -260,6 +319,34 @@
         <h3>Chapter 4 — Warm Homes: Local Grant</h3>
         <p>The means-tested route for households earning £36,000 or less or receiving a qualifying benefit. Free insulation, heat pump or solar installed by your local council at zero cost.</p>
         <p><a class="btn btn-ghost" href="sample-warm-homes.html" style="margin-top:8px;">Read Chapter 4 free →</a></p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Free chapter</span>
+        <h3>Chapter 5 — Warm Homes Loan Scheme</h3>
+        <p>The new September 2026 reduced-rate consumer loan. Up to 5 percentage points off, capped per measure, lender-led and stacking-friendly with the BUS grant.</p>
+        <p><a class="btn btn-ghost" href="sample-warm-homes-loan.html" style="margin-top:8px;">Read Chapter 5 free →</a></p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Free chapter</span>
+        <h3>Chapter 7 — Disabled Facilities Grant</h3>
+        <p>Up to £30,000 (England) or £36,000 (Wales) for home adaptations. Means-tested for adults, NOT means-tested for under-19s. OT assessment is the gateway.</p>
+        <p><a class="btn btn-ghost" href="sample-dfg.html" style="margin-top:8px;">Read Chapter 7 free →</a></p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Free chapter</span>
+        <h3>Chapter 9 — Scam warnings</h3>
+        <p>The three scam patterns targeting UK home-energy grant seekers, plus the official numbers to call (Ofgem, Warm Homes Local Grant helpline, Action Fraud) to verify a real offer.</p>
+        <p><a class="btn btn-ghost" href="sample-scams.html" style="margin-top:8px;">Read Chapter 9 free →</a></p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Free chapter</span>
+        <h3>Chapter 10 — 10-question installer checklist</h3>
+        <p>The exact questions to ask every MCS-certified installer, the line-by-line invoice test, the SCOP efficiency comparison, and how to spot the bad ones.</p>
+        <p><a class="btn btn-ghost" href="sample-installer-checklist.html" style="margin-top:8px;">Read Chapter 10 free →</a></p>
       </div>
     </div>
   </div>
