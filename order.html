@@ -114,7 +114,7 @@ Reference:  <span id="reference">GS-<span id="ref-suffix">XXXXXX</span></span>
 <script>
   // Generate a unique reference so payments are matched to orders.
   (function () {
-    var ref = 'GS-' + Math.random().toString(36).slice(2, 8).toUpperCase();
+    var ref = Math.random().toString(36).slice(2, 8).toUpperCase();
     var el = document.getElementById('ref-suffix');
     if (el) el.textContent = ref;
     var a = document.getElementById('buy-bacs');
